@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI TTS 文字朗读器</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- ... existing HTML ... -->
+    <button id="settings-button">设置</button>
+    <div style="background-color: white; padding: 0 20px 10px; margin: 30px auto 10px 110px; width: 200px; display: none;"
+        id="settings-panel">
+        <div id="controls-panel" style="display: none;">
+            <div class="slider-container">
+                <label for="openai-api-key">OpenAI API Key:</label>
+                <input type="text" id="openai-api-key">
+            </div>
+            <div class="slider-container">
+                <label for="volume-control">音量（默认0.7）</label>
+                <input type="range" id="volume-control" min="0" max="1" step="0.1" value="0.7">
+            </div>
+            <div class="slider-container">
+                <label for="speed-control">速度（默认1.0）</label>
+                <input type="range" id="speed-control" min="0.5" max="2" step="0.1" value="1">
+            </div>
+            <div class="select-container">
+                <label for="voice-select">音色</label>
+                <select id="voice-select">
+                    <!-- Options will be populated by JavaScript -->
+                </select>
+            </div>
+        </div>
+    </div>
+    <div id="app">
+        <textarea id="text-to-speak" placeholder="本页面通过调用openai api的方式，实现TTS文字转语音功能。可以直接播放也可以保存mp3文件。 请上传文件（仅限txt格式的纯文本）或直接在此请输入要朗读的文本..." ></textarea>
+        <input type="file" id="file-input" accept=".txt,.doc,.docx" style="display:none;">
+        <p id="info"></p>
+        <div style="display: flex;flex-direction: row;justify-content: center;align-items: center;">
+            <button for="file-input" id="file-label">上传文件</button>
+            <button id="read-button">生成语音</button>
+            <button id="play-button" style="display: none;">播放语音</button>
+            <button id="save-button" style="display: none;">保存mp3文件</button>
+        </div>
+    </div>
+    <p style="font-size: small; text-align: center;">联系作者微信: AiBotter</p>
+</body>
+
+</html>

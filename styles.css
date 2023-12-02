@@ -1,0 +1,115 @@
+body, html {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f8ff;
+    height: 100%;
+  }
+  
+  #app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    padding: 50px 20px 0;
+  }
+
+  #settings-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  #settings-panel {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  
+  textarea#text-to-speak {
+    width: 80%;
+    height: 200px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border: 1px solid darkcyan;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  button#read-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: darkcyan;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+  }
+  
+  button#read-button:hover {
+    background-color: darkcyan;
+  }
+  
+  #controls-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+  }
+  
+  .slider-container, .select-container {
+    margin-bottom: 10px;
+    width: 80%;
+    color:darkcyan;
+    padding: 0 0 0 5px;
+  }
+  
+  input[type="range"], select {
+    width: 100%;
+  }
+  
+  .upload-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .gener-button{
+    display: inline-block;
+    width: 100px;  /* Adjust as needed */
+    height: 50px;  /* Adjust as needed */
+    /* Other styles as needed */
+  }
+
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  #play-button {
+    background-color: #90EE90;
+    color: white;
+  }
+  
+  #save-button {
+    background-color: #add8e6;
+    color: white;
+  }
